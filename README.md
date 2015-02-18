@@ -1,6 +1,6 @@
-Portafolio Web Ver. 1.0
+CMS básico desarrollado en Django Framework, HTML5, CSS3 y Stylus
 
-Desarrollado en Django Framework, HTML5, CSS3 y Stylus
+Versión = 1.0
 
 Index muestra: 
 - Menu Dinamico
