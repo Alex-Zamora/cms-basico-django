@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div id="sub-head">
+		<div id="content-sub-head">
+			<div id="breadcrumb">
+				<h3>
+					<a href="{%url 'home'%}">Inicio</a>
+					/ <span><a href="{% url 'post_seccion' %}">Blog</a></span>			
+				{% if post_url %} 
+					/ {{post_url}}
+				{% endif %}
+				</h3>
+			</div>
+		</div> <!-- fin content sub head -->
+	</div> <!-- fin breadcrumb -->
+
+	<div id="wrapper-detail-post">
+
+		<section id="detail-post">
+
+			<article class="content-post">
+
+				<div class="title-post-detail"><h1>{{post_detail.title}}</h1></div>
+
+				<div class="data-post-detail">
+					
+					<div class="autor">
+						<span><img src="{{STATIC_URL}}images/user.png" alt="usuario"></span>
+						<h2>{{user.username}}</h2>
+					</div>
+					<div class="fecha">
+						<span><img src="{{STATIC_URL}}images/calendar.png" alt="fecha"></span><h2>{{post_detail.date|date:"d M Y"}}</h2>
+					</div>
+					<div class="category">
+						<span><img src="{{STATIC_URL}}images/tag-icon.png" alt="categoria"></span>
+						<ul>
+							{% for category in post_detail.category.all %}
+							<li>
+								<a href="#"><h2>{{category.name}}</h2></a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+					
+				</div> <!-- fin data-post-detail -->
+
+				<div class="image-post">
+					<img src="{{MEDIA_URL}}{{post_detail.imagePost}}" alt="{{post_detail.title}}">
+				</div>
+
+				<div class="text-post-detail">
+					{{post_detail.content|safe}}
+				</div> <!-- fin text post detail -->
+				
+				
+			</article> <!-- fin content post -->
+			
+		</section>
+		
+	</div> <!-- fin wrapper detail project -->
+
+
+	<!-- <aside>
+		<figure><img src="{{MEDIA_URL}}{{user.profile.avatar}}" width="100" alt=""></figure>
+		<h2>{{user.username}}</h2>
+		<h3>{{user.profile.biography}}</h3>
+		<h4>{% if user.profile.twitter %}
+			<a href="{{user.profile.twitter}}">Twitter</a>
+		{% endif %}
+		{% if user.profile.facebook %}
+			<a href="{{user.profile.facebook}}">Facebook</a>
+		{% endif %}
+		{% if user.profile.github %}
+			<a href="{{user.profile.github}}">Github</a>
+		{% endif %}</h4>
+				
+	</aside> -->
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div id="sub-head">
+		<div id="content-sub-head">
+			<div id="breadcrumb">
+				<h3>
+					<a href="{%url 'home'%}">Inicio</a>
+					/ <span><a href="{% url 'portfolio_seccion' %}">Proyectos</a></span>		
+				{% if project_url %} 
+					/ {{project_url}}
+				{% endif %}
+				</h3>
+			</div>
+		</div> <!-- fin content sub head -->
+	</div> <!-- fin breadcrumb -->
+
+	<div id="wrapper-detail-project">
+
+		<section id="detail-project">
+
+			<article class="images-project">
+				<img src="{{MEDIA_URL}}{{portfolio.imageProject}}" alt="">
+			</article>
+
+			<article class="description-project">
+				<div class="title-project"><h1>{{portfolio.title}}</h1></div>
+				<div class="text-project"><p>{{portfolio.description}}</p></div>
+				<div class="technologys">
+					<ul>
+						{% for technology in portfolio.technology.all %}
+						<li>
+							<h2>{{technology.name}}	</h2>
+						</li>
+						{% endfor %}
+					</ul>
+				</div> <!-- fin technologys -->
+
+				<div class="url-project">
+					{% if portfolio.url %}
+					<a href="{{portfolio.url}}" target="_blank">Ver Sitio Web</a>
+					{% endif %}
+				</div>
+				<div class="navegation-project">
+					<div class="all-projects">
+						<a href="/portafolio/">ver todos los proyectos</a>
+					</div>
+				</div>
+			</article>
+			
+		</section>
+		
+	</div> <!-- fin wrapper detail project -->
+
+
+{% endblock %}

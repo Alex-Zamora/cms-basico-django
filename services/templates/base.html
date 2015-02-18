@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	{% load portfolio_tags %}
+	<meta charset="UTF-8">
+	<title>{{titulo}}</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="{{STATIC_URL}}css/style.css">
+	<script src="{{STATIC_URL}}js/modernizr.custom.36260.js"></script>
+	
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>	 
+									
+			{% if path == '/' %}
+				<li><a class="active" href="{%url 'home'%}">Inicio</a></li>
+			{% else %}
+				<li><a href="{%url 'home'%}">Inicio</a></li>
+			{% endif %}
+			
+			{% if path == '/portafolio/' %}
+				<li>
+					<a class="active" href="{% url 'portfolio_seccion' %}">Proyectos</a>
+				</li>
+			{% elif None != project_url %}
+				<li>
+					<a class="active" href="{% url 'portfolio_seccion' %}">Proyectos</a>
+				</li>
+			{% else %}
+				<li>
+					<a href="{% url 'portfolio_seccion' %}">Proyectos</a>
+				</li>
+			{% endif %}
+					
+			{% if path == '/blog/' %}
+				<li>
+					<a class="active" href="/blog/">Blog</a>
+				</li>
+			{% elif None != post_url %}
+				<li>
+					<a class="active" href="/blog/">Blog</a>
+				</li>
+			{% else %}
+				<li>
+					<a href="/blog/">Blog</a>
+				</li>
+			{% endif %}
+			{% if path == '/contacto/' %}
+				<li><a class="active" href="{%url 'contacto_seccion'%}">Contacto</a></li>
+				{% else %}
+				<li><a href="{%url 'contacto_seccion'%}">Contacto</a></li>
+			{% endif %}
+
+			</ul>
+		</nav>
+	</header>
+	
+	{% block content %}{% endblock %}
+	<footer><h2>Código Open Source by Alex Zamora</h2></footer>
+
+</body>
+</html>

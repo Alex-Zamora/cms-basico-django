@@ -1,0 +1,635 @@
+*
+	margin 0
+	padding 0
+	border 0
+	//-bxz
+	-webkit-box-sizing border-box
+	-moz-box-sizing border-box
+	box-sizing border-box
+// Utilizar global reset para los sig proyectos 
+// global-reset()
+
+fondo = #ddd9d6
+azul  = #012754
+rojo  = #ee2547
+negro = #2c2c2c
+gris  = #383838
+ftext = 16px 'Open Sans'
+fsubt =  600 18px 'Open Sans'
+ftitle = 600 20px 'Open Sans'
+
+			
+
+body
+	background fondo
+	color negro
+	
+// --------- Menu ------------
+header
+	background-color azul
+	height 60px
+	width 100%
+	nav
+		height 60px
+		max-width 725px
+		margin 0 auto
+		ul
+			text-align center
+			font-size 0
+			li
+				display inline-block
+				margin-top 20px
+				a
+					font 400 16px 'Open Sans'
+					color #fff
+					text-decoration none					
+					padding 15px 10px 0px 10px
+									
+					&:hover
+						color: rojo
+				.active
+						color: rojo
+			
+// --------- Sub head --------
+#sub-head
+	width 100%
+	height 60px
+	background-color: #FFF
+	margin-bottom 30px
+	#content-sub-head
+		max-width 1170px
+		height 60px
+		margin 0 auto
+		#breadcrumb
+			padding-top 20px
+			float left
+			
+			h3
+				font ftext
+				a
+					text-decoration none
+					color negro
+				span
+					a
+						text-decoration none
+						color azul
+		#mensaje
+			padding-top 20px
+			float right
+			h2
+				font ftext
+				color negro					
+
+		
+// --------- Servicios ------------		
+#servicios
+	max-width 1170px
+	margin 0 auto	
+	font-size 0
+
+// ------ Servicio --------
+#servicio
+	background-color white
+	width 270px
+	margin-top 30px
+	margin-right 30px;
+	display inline-block
+	
+	//Quitar margin-right en el ultimo article
+	&:nth-child(4)
+		margin-right 0
+	img
+		width 200px
+		height 200px
+				
+	h2
+		color azul
+		font ftitle
+		font-weight 600
+		font-style italic
+		text-transform uppercase
+		text-align center
+		margin-top 25px
+						
+	p
+		color negro
+		text-align center
+		font ftext
+		font-weight 400
+		margin 17px
+		padding-bottom: 15px;
+		
+// -------- Ultimos proyectos ---------
+#u-proyectos
+	margin-top 30px
+	text-align center 
+	#t-proyectos
+		margin 0 auto	
+		max-width 1170px
+		height 60px
+		background-color #fff
+		margin-bottom 30px
+		h2
+			font ftitle
+			font-weight 600
+			text-transform uppercase
+			padding-top 17px
+	
+	#c-proyectos
+		max-width 1170px
+		margin 0 auto		
+		font-size 0
+		.proyecto
+			display inline-block
+			margin-right 30px
+			&:nth-child(3)
+				margin-right 0
+		
+			#n-cliente
+				background-color #f2f2f2
+				height 51px
+				h3
+					display block
+					float left
+					padding 17px 0 0 30px
+					font ftext
+					color negro
+		
+		#content-ver-p
+			margin 0 auto
+			width 370px
+			#ver-proyectos
+				margin-top 30px
+				a
+					text-decoration none
+					h3
+						font 14px 'Open Sans'
+						font-weight 600
+						text-transform uppercase
+						color rojo
+						text-align center
+			
+					
+		
+// -------------- Ultimos articulos --------------
+#ultimos-p
+	margin-top 30px
+	margin-bottom 30px
+	text-align center 
+	#title-p
+		margin 0 auto	
+		max-width 1170px
+		background-color #fff
+		height 60px
+		margin-bottom 30px
+		h2
+			text-align center
+			padding-top 17px
+			font ftitle
+			text-transform: uppercase;	
+	#contenido-p
+		max-width 1170px
+		margin 0 auto		
+		font-size 0
+		
+		.post-index
+			text-align center
+			width 370px
+			height 415px
+			background-color #fff
+			display inline-block
+			margin-right 30px
+			margin-bottom 30px
+			&:nth-child(3n+3)
+				margin-right 0
+			img
+				
+				padding 16px
+				max-width 365px
+				max-height 225px
+			a
+				text-decoration none
+				&:hover
+					text-decoration underline
+				h2
+					font fsubt
+					color azul
+					margin 0 16px
+					text-align left
+			p 
+				font ftext
+				margin 11px 16px 0 16px
+				height 100px
+				text-align left
+				
+			.pie-de-post
+				margin 0 16px
+				.fecha
+					float left
+					h3
+						font 300 14px 'Open Sans'
+	#wrapper-ver-post
+			margin 0 auto
+			width 370px
+			#ver-post
+				
+				a
+					text-decoration none
+					h3
+						font 14px 'Open Sans'
+						font-weight 600
+						text-transform uppercase
+						color rojo
+						text-align center
+	
+
+// =============== Proyectos ===============
+
+#wrapper-portafolio
+	//footer siempre abajo
+	min-height calc(100vh - 80px)
+				
+// ----- Contenido proyectos -----
+#proyectos
+	margin-top 30px
+		
+	#wrapper-proyectos
+		max-width 1170px
+		margin 0 auto		
+		font-size 0
+		
+		.proyecto			
+			display inline-block
+			margin-bottom 30px
+			margin-right 30px
+			// El número que se encuentra a la derecha del "+", indica cuál es el primer elemento que 
+			// se seleccionará, mientras que el número que se encuentra a la izquierda de la "n", indica 
+			// cuántos elementos se saltará hasta el próximo. 
+			&:nth-child(3n+3)
+				margin-right 0						
+				
+		#view-proyecto
+			height 51px
+			width 370px
+			
+			#icon-v
+				float left
+				
+			#n-cliente
+				background-color #f2f2f2
+				height 51px
+				h3
+					display block
+					float left
+					padding 17px 0 0 30px
+					font ftext
+					color negro
+		
+		#content-ver-p
+			margin 0 auto
+			width 370px
+			
+			#ver-proyectos
+				margin-top 30px
+				a
+					text-decoration none
+					h3
+						padding 16px
+						border 2px solid rojo
+						font 14px 'Open Sans'
+						font-weight 600
+						text-transform uppercase
+						color rojo
+						text-align center
+						
+// =============== Fin Proyectos ===============
+						
+// =============== Blog ===============
+
+#post-blog
+	margin-top 30px
+	
+	#ultimos-p
+	margin-top 30px
+	margin-bottom 30px
+	#title-p
+		width 100%
+		background-color #fff
+		height 60px
+		margin-bottom 30px
+		h2
+			text-align center
+			padding-top 17px
+			font ftitle
+			text-transform: uppercase;	
+	#contenido-p
+		max-width 1170px
+		margin 0 auto		
+		font-size 0
+		
+		
+		.post-index
+			text-align center
+			width 370px
+			height 415px
+			background-color #fff
+			display inline-block
+			margin-right 30px
+			margin-bottom 30px
+			&:nth-child(3n+3)
+				margin-right 0
+			img
+				padding 16px
+				max-width 365px
+				max-height 225px
+				
+			a
+				text-decoration none
+				text-align left
+				&:hover
+					text-decoration underline
+				h2
+					font fsubt
+					color azul
+					margin 0 16px
+			p 
+				font ftext
+				margin 11px 16px 0 16px
+				height 100px
+				text-align left
+				
+			.pie-de-post
+				margin 0 16px
+				.fecha
+					float left
+					h3
+						font 300 14px 'Open Sans'
+				.leer-mas
+					float right
+					h3
+						font 300 14px 'Open Sans'
+						float left
+					span
+						img
+							padding: 5px 0 0 7px;
+	#wrapper-ver-post-pag
+			margin 0 auto
+			width 370px
+			font 14px 'Open Sans'
+			font-weight 600
+			color rojo
+			text-align center
+			#ver-post-pag
+				display inline-block
+				a
+					text-decoration none
+					color azul					
+					text-transform uppercase
+						
+// =============== Fin Blog ===============
+
+// =============== Contacto ===============
+
+#wrapper-contacto
+	// centra el contenido
+	text-align center 
+	background-color #fff
+	max-width 1170px
+	margin 0 auto	
+	min-height calc(80vh - 80px)
+	
+	#contacto
+		// centra contenido
+		font-size: 0; 
+		display: inline-block
+		margin-bottom 30px
+			
+		#title-contacto
+			// centrar titulo con margin 0 auto 
+			margin 0 auto			
+			max-width 370px
+			padding-top 40px
+			padding-bottom 30px
+				
+			h2
+				font ftext				
+				text-align center
+				
+		#formulario
+			border-top 1px solid #dad8d8
+			padding-top 40px			
+			max-width 870px
+			height 300px
+			
+			#part1
+				width 48.5%
+				float left
+				input					
+					padding 20px
+					width 100%
+					border 1px solid azul
+					height 60px
+					font ftext
+					font-weight 300  
+					margin-bottom 30px					
+					[type=text]
+						color negro
+				::-webkit-input-placeholder 
+					color negro
+				:-moz-placeholder 
+						color negro	 
+				:-ms-input-placeholder 
+					color negro
+				input:-moz-placeholder 
+					color negro
+						
+			#part2
+				width 48.5%
+				float right
+				textarea
+					border 1px solid azul
+					width 100%
+					height 150px
+					font ftext
+					padding 15px
+					font-weight 300 
+					color negro
+					
+				input
+					height 60px
+					border 1px solid rojo
+					width 100%
+					background-color #fff
+					cursor pointer
+					margin-top 30px
+				#submit
+					color rojo
+					font ftext
+						
+// =============== Fin Contacto ===============
+
+// =============== Detail Project ===============
+
+#wrapper-detail-project	
+	max-width 1170px
+	margin 0 auto	
+	min-height calc(80vh - 80px)
+	#detail-project
+		background-color #fff		
+		// overflow hidden se usa para que el fondo blanco se ajuste al contenido de los float left o right
+		overflow hidden
+		// ----- Imagenes del proyecto -----
+		.images-project
+			width 64%
+			float left
+			img
+				width 100%
+		// ----- descripcion del proyecto -----
+		.description-project
+			width 35%
+			float right
+			padding 35px
+			.title-project
+				h1
+					font fsubt
+					color black
+					margin-top 20px
+					margin-bottom 35px
+			.text-project
+				p
+					font ftext
+					color negro
+					line-height 24px
+					margin-bottom 35px
+			.technologys
+				margin-bottom 30px
+				ul
+					list-style none
+				   
+					li
+						display inline  					
+						&:before
+							color rojo
+							float left
+						h2
+							font ftext
+							color negro
+			.url-project
+				font ftext
+				margin-bottom 30px
+				margin-left 25px
+				a
+					color negro
+					text-decoration none
+					
+
+			.navegation-project
+				.all-projects
+					float left
+				.one-project
+					float right
+
+// =============== Fin Detail Project ===============
+
+// =============== Detail Blog ===============
+#wrapper-detail-post
+	text-align center 
+	max-width 1170px
+	margin 0 auto	
+	min-height calc(80vh - 80px)
+	background-color #fff
+	#detail-post		
+		font-size 0
+		display inline-block
+		.content-post
+			max-width 930px
+			.title-post-detail
+				margin-top 40px
+				display inline-block
+				h1
+					font 600 30px 'Open Sans'
+					color rojo
+					text-align center
+					max-width 850px
+					
+			.data-post-detail
+				margin-top 20px
+				margin-bottom 30px
+				overflow hidden
+				display inline-block
+				padding 0 10px 0 10px				
+				.autor
+					float left
+					padding-right 20px	
+					span
+						padding: 3px 10px 0 0
+						float left
+						img
+							width 13px
+					h2
+						font ftext
+						color azul
+						float left
+				.fecha
+					float left
+					padding-right 20px		
+					span
+						padding: 3px 10px 0 0
+						float left
+						img
+							width 13px
+					h2
+						font ftext
+						color azul
+						float left
+				.category
+					float left
+					padding-right 20px							
+					span
+						padding: 3px 10px 0 0 
+						float left
+						img
+							width 13px
+					ul
+						float left
+						li
+							float left
+							padding-right 6px
+							h2								
+								font ftext
+								color azul					
+					
+			.image-post
+				img
+					max-width 100%
+					margin-bottom 40px
+			.text-post-detail
+				p
+					font 400 18px 'Open Sans'
+					color gris
+					margin-bottom 40px
+					// text-align left
+
+// =============== Fin Detail Blog ===============				 				
+
+// =============== Footer ===============
+
+footer
+	// footer siempre abajo
+	min-height 80px
+	width 100%
+	background-color azul
+	margin-top 30px
+	clear both
+	
+	h2
+		font ftext
+		color #fff
+		text-align center
+		padding-top 32px
+
+// =============== Fin Footer ===============
+						
+			
+	
+	

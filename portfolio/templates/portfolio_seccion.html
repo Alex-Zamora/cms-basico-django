@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div id="sub-head">
+		<div id="content-sub-head">
+			<div id="breadcrumb">
+				<h3>
+					<a href="{%url 'home'%}">Inicio</a>
+					/ <span><a href="{% url 'portfolio_seccion' %}">Proyectos</a></span>
+				</h3>				
+				{% if project_url %} 
+					{{project_url}}
+				{% endif %}
+				
+			</div>
+			<div id="mensaje">
+				<h2>Diseño y Programación Web México</h2>
+			</div>
+		</div> <!-- fin content sub head -->
+	</div> <!-- fin breadcrumb -->
+
+
+	<div id="wrapper-proyectos">
+
+		<section id="proyectos">
+
+			<div id="wrapper-proyectos">
+				{% for proyecto in portfolio %}
+				<article class="proyecto">
+
+					<a href="{{proyecto.slug}}/"><img src="{{MEDIA_URL}}{{proyecto.imageIndex}}" alt="páginas web méxico"></a>
+
+					<div id="view-proyecto">				
+						<div id="n-cliente"><a href="{{proyecto.slug}}/"><h3>{{proyecto.title}}</h3></a></div>
+					</div> <!-- fin view-proyecto -->
+
+				</article> <!-- fin proyecto -->
+				{% endfor %}
+
+				<!-- <div id="content-ver-p">
+					<div id="ver-proyectos">
+						<a href="#"><h3>ver todos los proyectos</h3></a>
+					</div>
+				</div> --> <!-- fin content ver proyectos -->
+
+			</div> <!-- fin contenido-proyectos -->
+		</section> <!-- fin ultimos proyectos -->
+	</div> <!-- fin wrapper portafolio -->
+
+
+{% endblock %}

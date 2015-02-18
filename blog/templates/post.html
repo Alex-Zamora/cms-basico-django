@@ -1,0 +1,28 @@
+		
+		<div id="title-p"><h2>ultimos articulos</h2></div>
+
+			<div id="contenido-p">
+				
+				{% for post in posts %}
+				<article class="post-index">
+
+					<a href="blog/{{post.slug}}/"><img src="{{MEDIA_URL}}{{post.imageIndex}}" alt="{{post.title}}"></a>
+					
+					<a href="blog/{{post.slug}}/"><h2>{{post.title}}</h2></a>
+
+					{{post.content|truncatechars:140|safe}}
+
+					<div class="pie-de-post">
+						<div class="fecha"><h3>{{post.date|date:"d M Y"}}</h3></div>
+					</div>			
+					
+				</article><!-- fin post-index -->
+				{% endfor %}
+
+				<div id="wrapper-ver-post">
+					<div id="ver-post">
+						<a href="blog/"><h3>ver todos los Articulos</h3></a>
+					</div>
+				</div> <!-- fin content ver post -->
+
+			</div> <!-- fin contenido post -->

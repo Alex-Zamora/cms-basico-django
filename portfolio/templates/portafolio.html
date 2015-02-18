@@ -1,0 +1,26 @@
+
+		<div id="t-proyectos"><h2>ultimos proyectos realizados</h2></div>
+
+		<div id="c-proyectos">
+
+			{% for portfolio in portfolios %}
+			<article class="proyecto">
+				<a href="portafolio/{{portfolio.slug}}/">
+					<img src="{{MEDIA_URL}}{{portfolio.imageIndex}}" alt="páginas web méxico">
+				</a>
+				<div id="view-proyecto">				
+					<div id="n-cliente">
+						<a href="portafolio/{{portfolio.slug}}/"><h3>{{portfolio.title}}</h3></a>
+					</div>
+				</div> <!-- fin view-proyecto -->			
+			</article><!-- fin proyecto -->
+			{% endfor %}
+
+			<div id="content-ver-p">
+				<div id="ver-proyectos">
+					<a href="portafolio/"><h3>ver todos los proyectos</h3></a>
+				</div>
+			</div> <!-- fin content ver proyectos -->
+
+		</div> <!-- fin contenido-proyectos -->
+		

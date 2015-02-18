@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load portfolio_tags %}
+{% load post_tags %}
+
+{% block content %}
+
+	<div id="wrapper-index">
+
+		<section id="servicios">
+
+			{% for s in service %}
+			<article id="servicio">				
+					<div id="image"><img src="{{MEDIA_URL}}{{s.image}}" alt="{{s.title}}"></div>
+					<h2>{{s.title}}</h2>
+					<p>{{s.description}}</p>				
+			</article><!-- fin servicio -->
+			{% endfor %}
+		</section><!-- fin servicios -->
+
+		<section id="u-proyectos">
+			{% portfolio_view %}
+		</section>
+		
+		<section id="ultimos-p">
+			{% post_view %}
+		</section><!-- fin ultimos articulos -->
+		
+	</div> <!-- fin wrapper index -->
+
+{% endblock %}
