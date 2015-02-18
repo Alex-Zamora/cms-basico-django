@@ -1,4 +1,6 @@
-Portafolio Web desarrollado en Django Framework, HTML5, CSS3 y Stylus
+Portafolio Web Ver. 1.0
+
+Desarrollado en Django Framework, HTML5, CSS3 y Stylus
 
 Index muestra: 
 - Menu Dinamico
