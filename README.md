@@ -14,6 +14,7 @@ Otras secciones:
 - Contacto
 
 Requerimientos:
+- Python==3.4.1
 - Django==1.7.1
 - Pillow==2.6.1
 - django-summernote==0.6.0 (Editor WYSIWYG)
